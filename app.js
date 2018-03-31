@@ -7,9 +7,7 @@ GAME RULES:
 - The player can choose to 'Hold', which means that his ROUND score gets added to his GLBAL score. After that, it's the next player's turn
 - The first player to reach 100 points on GLOBAL score wins the game
 
-*/
-
-
+*/   
 var scores, roundScore, activePlayer;
 init();
 document.getElementById('current-1').textContent = 0;
@@ -39,16 +37,12 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
      document.querySelector('#name-' +activePlayer).textContent = 'Winner';
      document.querySelector('.dice').style.display ='none';
      document.querySelector('.player-' +activePlayer + '-panel').classList.add('winner');
-     document.querySelector('.player-' +activePlayer + '-panel').classList.remove('active ');
+     document.querySelector('.player-' +activePlayer + '-panel').classList.remove('active');
     }else{
         nextPlayer();
     }   
 });
-document.querySelector('.btn-new').addEventListener('click' ,function(){
-    alert("hello");
-    init(); 
-
-});
+document.querySelector('.btn-new').addEventListener('click',init);
 function nextPlayer() {
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     roundScore = 0;
@@ -69,7 +63,15 @@ function init() {
     document.getElementById('score-0').textContent = 0;
     document.getElementById('current-0').textContent = 0;
     document.getElementById('current-1').textContent = 0;
+    document.querySelector('#name-1').textContent = 'Bugsss';
+    document.querySelector('#name-0').textContent = 'Bunny';
+    document.querySelector('.player-0-panel').classList.remove('winner');
+    document.querySelector('.player-1-panel').classList.remove('winner');
+    document.querySelector('.player-0-panel').classList.remove('active');
+    document.querySelector('.player-1-panel').classList.remove('active');
+    document.querySelector('.player-0-panel').classList.add ('active');
   }
+  
 
 
 
