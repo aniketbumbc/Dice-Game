@@ -48,7 +48,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
             if(input){
                  WinningScore = input;
             }else{
-                WinningScore = 50;
+                WinningScore = 25;
             }
         if (scores[activePlayer] >= WinningScore) {
             document.querySelector('#name-' + activePlayer).textContent = 'Winner';
@@ -83,8 +83,8 @@ function init() {
     document.getElementById('score-0').textContent = 0;
     document.getElementById('current-0').textContent = 0;
     document.getElementById('current-1').textContent = 0;
-    document.querySelector('#name-1').textContent = 'Bugsss';
-    document.querySelector('#name-0').textContent = 'Bunny';
+    document.querySelector('#name-1').textContent = 'Player-1';
+    document.querySelector('#name-0').textContent = 'Player-2';
     document.querySelector('.player-0-panel').classList.remove('winner');
     document.querySelector('.player-1-panel').classList.remove('winner');
     document.querySelector('.player-0-panel').classList.remove('active');
